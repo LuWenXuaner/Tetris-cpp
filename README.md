@@ -178,7 +178,7 @@ The project is built on a highly modular object-oriented architecture, with two 
 - Advanced Fusion Mode Interface
 - Number Puzzle Mode Interface
 
-## Project Highlights (For Resume)
+## Project Highlights 
 
 1. Strictly follows object-oriented programming principles, completes class abstraction, encapsulation, inheritance and polymorphism design, with clear code structure, low coupling and high scalability
 2. Independently designed and implemented 2 innovative game modes (Advanced Fusion Mode, Number Puzzle Mode), realizing gameplay innovation on the basis of traditional Tetris

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SetWindow</class>
+ <widget class="QWidget" name="SetWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>440</width>
+    <height>395</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="res.qrc">
+    <normaloff>:/image/Set.ico</normaloff>:/image/Set.ico</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+	font: 18pt &quot;黑体&quot;;
+    color:rgb(0, 0, 0);
+	border-width:10px;
+	border-color:rgb(170, 0, 0);
+	border-style:double;
+	background-color:rgb(170, 255, 255);
+
+}
+
+
+QPushButton:hover
+{
+	font:16pt  &quot;Microsoft YaHei UI&quot;;
+}
+
+QPushButton:pressed
+{
+	font:14pt  &quot;Microsoft YaHei UI&quot;;
+}</string>
+  </property>
+  <widget class="CBoard" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>441</width>
+     <height>391</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QPushButton" name="WayChoose">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>150</y>
+      <width>181</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+border-color:rgb(0, 85, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>玩 法 选 择</string>
+    </property>
+   </widget>
+   <widget class="QCommandLinkButton" name="ReturnMain">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>330</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*
+{
+	border-style:none;
+	font: 15pt &quot;楷体&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>返回主界面</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CBoard</class>
+   <extends>QFrame</extends>
+   <header location="global">cboard.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

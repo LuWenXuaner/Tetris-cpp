@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>652</width>
+    <height>577</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>俄罗斯方块</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="res.qrc">
+    <normaloff>:/image/tetrisIcon.png</normaloff>:/image/tetrisIcon.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+	border-style:double;
+	border-color: rgb(0, 240, 0);
+	border-width:4px;
+	color: rgb(255, 255, 255);
+	border-radius:10px;
+	font: 700 16pt &quot;Microsoft YaHei UI&quot;;
+	pading:4px;
+	min-height:50px;
+}
+
+QFrame#frameBg{
+	background-color: rgb(3, 54, 73);
+}
+
+QLabel{
+	border-width:0px;
+}
+
+QLabel#labelNextPiece{
+	border-width:2px;
+}
+
+QFrame#frameTetrisBoard{
+	border-image: url(:/image/NWAFU_bg.png);
+	pading:0px;
+}
+
+QPushButton{
+	border-width:1px;
+	font: 14pt &quot;Microsoft YaHei UI&quot;;
+}
+QPushButton:hover{
+	font: 16pt &quot;Microsoft YaHei UI&quot;;
+}
+QPushButton:pressed{
+	padding-left:6px;
+	pading-top:6px;
+	font: 14pt &quot;Microsoft YaHei UI&quot;;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QFrame" name="frameBg">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="1" column="2">
+        <widget class="QLCDNumber" name="lcdTime"/>
+       </item>
+       <item row="8" column="2">
+        <widget class="QLCDNumber" name="lcdRemoved"/>
+       </item>
+       <item row="11" column="0">
+        <widget class="QPushButton" name="pbExit">
+         <property name="text">
+          <string>退 出</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>分 数</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1" rowspan="12">
+        <widget class="CBoard" name="frameTetrisBoard">
+         <property name="minimumSize">
+          <size>
+           <width>300</width>
+           <height>58</height>
+          </size>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="Contents">
+          <property name="geometry">
+           <rect>
+            <x>90</x>
+            <y>220</y>
+            <width>141</width>
+            <height>50</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">*
+{
+  color:rgb(170, 0, 0);
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item row="5" column="2">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>速 度</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>存活时间</string>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" rowspan="2">
+        <widget class="QLabel" name="labelNextPiece">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QPushButton" name="pbStart">
+         <property name="text">
+          <string>开 始</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="2">
+        <widget class="QLCDNumber" name="lcdScore">
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0">
+        <widget class="QPushButton" name="pbPause">
+         <property name="text">
+          <string>暂 停</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="2">
+        <widget class="QLCDNumber" name="lcdLevel"/>
+       </item>
+       <item row="7" column="2">
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>消除行数</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>下一个</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QPushButton" name="pbSet">
+         <property name="text">
+          <string>设置</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QPushButton" name="level">
+         <property name="text">
+          <string>困 难</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CBoard</class>
+   <extends>QFrame</extends>
+   <header location="global">cboard.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pbExit</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>90</x>
+     <y>503</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>315</x>
+     <y>270</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NumberPlay</class>
+ <widget class="QWidget" name="NumberPlay">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>494</width>
+    <height>590</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>NumberPlay</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="res.qrc">
+    <normaloff>:/image/ngame.ico</normaloff>:/image/ngame.ico</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+	border-style:double;
+	border-color: rgb(0, 240, 0);
+	border-width:4px;
+	color: rgb(255, 255, 255);
+	border-radius:10px;
+	font: 700 16pt &quot;Microsoft YaHei UI&quot;;
+	pading:4px;
+	min-height:50px;
+}
+
+QFrame#frame{
+	background-color: rgb(3, 54, 73);
+}
+
+QLabel{
+	border-width:0px;
+}
+
+QLabel#labelNextPiece{
+	border-width:2px;
+}
+
+QFrame#frameTetrisBoard{
+	background-image: url(:/image/tetrisbg.png);
+	pading:0px;
+}
+
+QPushButton{
+	border-width:1px;
+	font: 14pt &quot;Microsoft YaHei UI&quot;;
+}
+QPushButton:hover{
+	font: 16pt &quot;Microsoft YaHei UI&quot;;
+}
+QPushButton:pressed{
+	padding-left:6px;
+	pading-top:6px;
+	font: 14pt &quot;Microsoft YaHei UI&quot;;
+}</string>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>501</width>
+     <height>621</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QPushButton" name="pbStart">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>480</y>
+      <width>141</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>开始游戏</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>30</y>
+      <width>121</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>下一个方块：</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelNextPiece">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>90</y>
+      <width>131</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="CBoard_Number" name="frameNumberTetris">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>331</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CBoard_Number</class>
+   <extends>QFrame</extends>
+   <header location="global">cboard_number.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>HigherPlay</class>
+ <widget class="QWidget" name="HigherPlay">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>655</width>
+    <height>765</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>300</width>
+    <height>58</height>
+   </size>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="tabletTracking">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Happy Player</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="res.qrc">
+    <normaloff>:/image/Way_1.ico</normaloff>:/image/Way_1.ico</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+	border-style:double;
+	border-color: rgb(0, 240, 0);
+	border-width:4px;
+	color: rgb(255, 255, 255);
+	border-radius:10px;
+	font: 700 16pt &quot;Microsoft YaHei UI&quot;;
+	pading:4px;
+	min-height:50px;
+	font: 18pt &quot;黑体&quot;;
+}
+
+QFrame#frameBg_1{
+	background-color: rgb(3, 54, 73);
+}
+
+QLabel{
+	border-width:0px;
+}
+
+QLabel#labelNextPiece_1{
+	border-width:2px;
+}
+
+QFrame#frameTetrisBoard_1{
+	background-image: url(:/image/tetrisbg.png);
+	pading:0px;
+}
+
+QPushButton{
+	border-width:1px;
+	font: 14pt &quot;Microsoft YaHei UI&quot;;
+}
+QPushButton:hover{
+	font: 16pt &quot;Microsoft YaHei UI&quot;;
+}
+QPushButton:pressed{
+	padding-left:6px;
+	pading-top:6px;
+	font: 14pt &quot;Microsoft YaHei UI&quot;;
+}</string>
+  </property>
+  <widget class="QFrame" name="frameBg_1">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>651</width>
+     <height>761</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="CBoard_Expand" name="frameTetrisBoard_1">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>441</width>
+      <height>741</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>300</width>
+      <height>58</height>
+     </size>
+    </property>
+    <property name="baseSize">
+     <size>
+      <width>300</width>
+      <height>58</height>
+     </size>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>30</y>
+      <width>141</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>下一个方块：</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelNextPiece_1">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>80</y>
+      <width>161</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pbStart">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>660</y>
+      <width>171</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>开 始</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CBoard_Expand</class>
+   <extends>QFrame</extends>
+   <header location="global">cboard_expand.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>
